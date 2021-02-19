@@ -41,10 +41,10 @@ $$\text{Cov}[\textbf{Y}] = \text{Cov}(C\textbf{X}) = C \cdot \text{Cov}(\textbf{
 \end{pmatrix} $$
 
 
-Hence, the distribution of \textbf{Y} is bivariate normal distributed with mean $(-\sqrt{2}, \sqrt{2})^T$, and covariance matrix $\begin{pmatrix}
+Since Y is a linear combination of X, which is bivariate normal distributed, the distribution of \textbf{Y} is bivariate normal distributed with mean $(-\sqrt{2}, \sqrt{2})^T$, and covariance matrix $\begin{pmatrix}
 2 & 0\\
 0  & 4 
-\end{pmatrix} $. Since Y is a linear combination of X it....
+\end{pmatrix} $
 
 $$\textbf{Y } \mathtt{\sim} \text{ N}\left(\begin{pmatrix}
 -\sqrt{2} \\
@@ -54,6 +54,8 @@ $$\textbf{Y } \mathtt{\sim} \text{ N}\left(\begin{pmatrix}
 0  & 4 
 \end{pmatrix}\right) $$
 
-$Y_1$ and $Y_2$ are independent variables since. ... 
+$Y_1$ and $Y_2$ are independent variables since $\text{Cov}(Y_1, Y_2) = 0$ according to the covariance matrix of $Y$. 
+
+%if one choose $A$ and $B$ such that $AY = Y_1$ and $BY = Y_2$ then $A \Sigma B^T = 0$
 
 
