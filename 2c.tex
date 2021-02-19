@@ -1,0 +1,28 @@
+Here we are going to derive the distribution of $\frac{(n-1)S^2}{\sigma^2}$, where $S^2 = \frac{1}{n-1}\boldsymbol{X}^TC\boldsymbol{X}$, $C$ is the centring matrix and $\boldsymbol{X} \sim N(\mu\boldsymbol{1}, \sigma^2I)$. We want to use that if $R$ is a symmetric and idempotent matrix with rank $r$, and $\boldsymbol{Y} \sim N(\boldsymbol{0}, I)$, then $\boldsymbol{Y}^TR\boldsymbol{Y} \sim \chi_r^2$, as stated in the hint in the problem. We cannot use this directly since $\boldsymbol{X}$ is not standard normal distributed. Hence, we start by using the Mahalanobis transformation,
+\begin{equation}
+    \label{mahalonobis}
+    \boldsymbol{Z} = \Sigma^{-1/2}(\boldsymbol{X} -\boldsymbol{\mu}) \implies \boldsymbol{X} = \Sigma^{1/2}\boldsymbol{Z} +\boldsymbol{\mu}.
+\end{equation}
+
+By substitute $\boldsymbol{X}$ in $S^2 = \frac{1}{n-1}\boldsymbol{X}^TC\boldsymbol{X}$ by \eqref{mahalonobis}, with $\Sigma^{1/2} = \sigma I$ and $\boldsymbol{\mu} = \mu \boldsymbol{1}$, we get
+
+\begin{align*}
+    S^2 &= \frac{1}{n-1}\left(\sigma I\boldsymbol{Z}+\mu\boldsymbol{1}\right)^TC\left(\sigma I\boldsymbol{Z}+\mu\boldsymbol{1}\right)\\
+    &= \frac{1}{n-1}\left(C\left(\sigma I\boldsymbol{Z}+\mu\boldsymbol{1}\right)\right)^TC\left(\sigma I\boldsymbol{Z}+\mu\boldsymbol{1}\right)\\
+    &= \frac{1}{n-1}\left(\left(I-\frac{1}{n}\boldsymbol{1}\boldsymbol{1}^T\right)\left(\sigma I\boldsymbol{Z}+\mu\boldsymbol{1}\right)\right)^T\left(I-\frac{1}{n}\boldsymbol{1}\boldsymbol{1}^T\right)\left(\sigma I\boldsymbol{Z}+\mu\boldsymbol{1}\right) \\
+    &= \frac{1}{n-1}\left(\sigma\boldsymbol{Z}+\mu\boldsymbol{1}-\frac{\sigma}{n}\boldsymbol{1}\boldsymbol{1}^T\boldsymbol{Z}-\frac{\mu}{n}\boldsymbol{1}\boldsymbol{1}^T\boldsymbol{1}\right)^T\left(\sigma\boldsymbol{Z}+\mu\boldsymbol{1}-\frac{\sigma}{n}\boldsymbol{1}\boldsymbol{1}^T\boldsymbol{Z}-\frac{\mu}{n}\boldsymbol{1}\boldsymbol{1}^T\boldsymbol{1}\right) \\
+    &= \frac{1}{n-1}\left(\sigma\boldsymbol{Z}-\frac{\sigma}{n}\boldsymbol{1}\boldsymbol{1}^T\boldsymbol{Z}\right)^T\left(\sigma\boldsymbol{Z}-\frac{\sigma}{n}\boldsymbol{1}\boldsymbol{1}^T\boldsymbol{Z}\right) \\
+    &= \frac{\sigma^2}{n-1}\left(\left(I-\frac{1}{n}\boldsymbol{1}\boldsymbol{1}^T\right)\boldsymbol{Z}\right)^T\left(\left(I-\frac{1}{n}\boldsymbol{1}\boldsymbol{1}^T\right)\boldsymbol{Z}\right) \\
+    &= \frac{\sigma^2}{n-1}\boldsymbol{Z}^TC\boldsymbol{Z},
+\end{align*}
+
+where we have used that $C$ is idempotent and symmetric and that $\boldsymbol{1}^T\boldsymbol{1} = n$. This implies that 
+\begin{equation*}
+    \frac{(n-1)S^2}{\sigma^2} = \boldsymbol{Z}^TC\boldsymbol{Z},
+\end{equation*}
+
+and since $\boldsymbol{Z} \sim N(\boldsymbol{0}, I)$ and $\text{rank}(C) = \text{tr}(C) = n - 1$ is 
+
+\begin{equation*}
+    \frac{(n-1)S^2}{\sigma^2} \sim \chi_{n-1}^2.
+\end{equation*}
