@@ -1,0 +1,15 @@
+First, we want to show that the mean value of X given as $\bar X = \frac{1}{n} \sum_{i=1}^{n} X_i$, can be written as $\bar X = \frac{1}{n} \textbf{1}^T \textbf{X}$. 
+$$
+\bar X = \frac{1}{n} \sum_{i=1}^{n} X_i = \frac{1}{n} (X_1 + X_2 + ... + X_n) = \frac{1}{n} [1, 1, ..., 1]^T [X_1, X_2, ..., X_n]= \frac{1}{n} \textbf{1}^T \textbf{X}
+$$
+
+Secondly, we want to show that the estimator of the variance $S^2 = \frac{1}{n-1}  \sum_{i=1}^{n} (X_i - \bar X)^2$ can be written in terms of the centering matrix C as  $S^2 = \frac{1}{n-1} \textbf{X}^T C \textbf{X}.$
+$$
+S^2 = \frac{1}{n-1}  \sum_{i=1}^{n} (X_i - \bar X)^2 = \frac{1}{n-1} (C\textbf{X})^T (C\textbf{X}) = \frac{1}{n-1} \textbf{X}^T C^T C \textbf{X} =  \frac{1}{n-1} \textbf{X}^T C \textbf{X}
+$$
+
+Here, $\sum_{i=1}^{n} (X_i - \bar X)^2 = (C\textbf{X})^T (C\textbf{X})$ since ...
+
+and the final equality is due to the fact the the centering matrix is symmetric and idempotent, so that $C^T C = CC = C^2 = C$.  
+
+
