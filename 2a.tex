@@ -8,7 +8,7 @@ $$
 S^2 = \frac{1}{n-1}  \sum_{i=1}^{n} (X_i - \bar X)^2 = \frac{1}{n-1} (C\textbf{X})^T (C\textbf{X}) = \frac{1}{n-1} \textbf{X}^T C^T C \textbf{X} =  \frac{1}{n-1} \textbf{X}^T C \textbf{X}
 $$
 
-Here, $\sum_{i=1}^{n} (X_i - \bar X)^2 = (C\textbf{X})^T (C\textbf{X})$ since ...
+Here, $\sum_{i=1}^{n} (X_i - \bar X)^2 = (C\textbf{X})^T (C\textbf{X})$ since $C\textbf{X} = \left(I-\frac{1}{n}\boldsymbol{1}\boldsymbol{1}^T\right)\textbf{X} = \textbf{X}-\frac{1}{n}\boldsymbol{1}\boldsymbol{1}^T\textbf{X} = \textbf{X}-\boldsymbol{1}\bar{X}$, which implies that $\left(C\textbf{X}\right)_i = X_i - \bar{X}.$
 
 and the final equality is due to the fact the the centering matrix is symmetric and idempotent, so that $C^T C = CC = C^2 = C$.  
 
