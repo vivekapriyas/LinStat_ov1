@@ -2,9 +2,17 @@ First we will show that $\frac{1}{n}\textbf{1}^T C = \textbf{0}^T$.
 
 $$\frac{1}{n}\textbf{1}^T C = \frac{1}{n} \textbf{1}^T \left(I - \frac{1}{n} \textbf{1}\textbf{1}^T\right) = \frac{1}{n} \textbf{1}^T - \frac{1}{n^2} \textbf{1}^T \textbf{1}\textbf{1}^T = \frac{1}{n} \textbf{1}^T - \frac{1}{n} \textbf{1}^T = \textbf{0}^T$$
 
-Here we have used that $\textbf{1}^T \textbf{1} = n$
+where we have used that $\textbf{1}^T \textbf{1} = n$.
 
-WHAT DOES THIS IMPLY ABOUT $\frac{1}{n}\textbf{1}^TX$ AND $C\textbf{X}$.. 
+If we define $A = \frac{1}{n} \textbf{1}^T$, then we can say that $A \textbf{X}$ and $C \textbf{X}$ are independent if $A \Sigma C^T = 0$.
+
+Using that both the centering and the identity matrix are symmetric idempotent one get
+$$ 
+A \Sigma C^T = A \Sigma C =  \frac{1}{n} \textbf{1}^T \sigma^2 I (I - \frac{1}{n} \textbf{1}\textbf{1}^T) = \frac{ \sigma^2}{n} \textbf{1}^T I^2 - \frac{\sigma^2}{n^2}  \textbf{1}^T  \textbf{1}\textbf{1}^T I =  \frac{ \sigma^2}{n} \textbf{1}^T I - \frac{ \sigma^2}{n} \textbf{1}^T I = 0.
+$$
+So, $\frac{1}{n} \textbf{1}^T X$ and $C\textbf{X}$ are independent, which can also been seen from what we showed above, namely that $\frac{1}{n} \textbf{1}^T C = \textbf{0}^T $, meaning that (the product of) each component is orthogonal/uncorrelated/independent ???????????
+
+Furthermore, this result can be used to conclude that $\bar X$ and $S^2$ are independent, since 
 
 
 
