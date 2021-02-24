@@ -4,15 +4,15 @@ $$\frac{1}{n}\textbf{1}^T C = \frac{1}{n} \textbf{1}^T \left(I - \frac{1}{n} \te
 
 where we have used that $\textbf{1}^T \textbf{1} = n$.
 
-If we define $A = \frac{1}{n} \textbf{1}^T$, then we can say that $A \textbf{X}$ and $C \textbf{X}$ are independent if $A \Sigma C^T = 0$.
-
-Using that both the centering and the identity matrix are symmetric idempotent one get
-$$ 
-A \Sigma C^T = A \Sigma C =  \frac{1}{n} \textbf{1}^T \sigma^2 I (I - \frac{1}{n} \textbf{1}\textbf{1}^T) = \frac{ \sigma^2}{n} \textbf{1}^T I^2 - \frac{\sigma^2}{n^2}  \textbf{1}^T  \textbf{1}\textbf{1}^T I =  \frac{ \sigma^2}{n} \textbf{1}^T I - \frac{ \sigma^2}{n} \textbf{1}^T I = 0.
-$$
-So, $\frac{1}{n} \textbf{1}^T X$ and $C\textbf{X}$ are independent, which can also been seen from what we showed above, namely that $\frac{1}{n} \textbf{1}^T C = \textbf{0}^T $, .....
-
-Furthermore, this result can be used to conclude that $\bar X$ and $S^2$ are independent, since $S^2$ is a linear combination of $C\textbf{X}$ and $\bar X$ of $A$...
+If we define $A = \frac{1}{n} \textbf{1}^T$, then we can say that $A \textbf{X}$ and $C \textbf{X}$ are independent if $A \Sigma C^T = \textbf{0}^T$. From the calculations above we have that $\frac{1}{n}\textbf{1}^T C = 0$ and since $A\Sigma C =  \frac{1}{n} \textbf{1}^T \sigma^2 I C = \sigma^2 \frac{1}{n} \textbf{1}^TC = \sigma^2 \textbf{0}^T = \textbf{0}^T$, are $\frac{1}{n} \textbf{1}^T \textbf{X}$ and $C\textbf{X}$ are independent. 
 
 
+%Using that both the centering and the identity matrix are symmetric idempotent one get
+%$$ 
+%A \Sigma C^T = A \Sigma C =  \frac{1}{n} \textbf{1}^T \sigma^2 I (I - \frac{1}{n} \textbf{1}\textbf{1}^T) = \frac{ \sigma^2}{n} \textbf{1}^T I^2 - \frac{\sigma^2}{n^2}  \textbf{1}^T  \textbf{1}\textbf{1}^T I =  \frac{ \sigma^2}{n} \textbf{1}^T I - \frac{ \sigma^2}{n} \textbf{1}^T I = \textbf{0}^T.
+%$$
+%So, $\frac{1}{n} \textbf{1}^T \textbf{X}$ and $C\textbf{X}$ are independent, which can also been seen from what we showed above, namely that $\frac{1}{n} \textbf{1}^T C = \textbf{0}^T $.
+
+
+Furthermore, since $\bar{X}$ and  $C\textbf{X}$ are independent and$S^2 = \frac{1}{n-1}(C\textbf{X})^T (C\textbf{X})$, i.e. $S^2$ is a linear combination of $C\textbf{X}$, we have that $\bar{X}$ and $S^2$ are independent. 
 
