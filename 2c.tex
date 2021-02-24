@@ -26,3 +26,16 @@ and since $\boldsymbol{Z} \sim N(\boldsymbol{0}, I)$ and $\text{rank}(C) = \text
 \begin{equation*}
     \frac{(n-1)S^2}{\sigma^2} \sim \chi_{n-1}^2.
 \end{equation*}
+
+
+This implies that 
+\begin{equation*}
+    \frac{(n-1)S^2}{\sigma^2} = \boldsymbol{Z}^TC\boldsymbol{Z},
+\end{equation*}
+
+and due to the fact that $\boldsymbol{Z} \sim N(\boldsymbol{0}, I)$ and $\text{rank}(C) = \text{tr}(C) = n - 1$ the distribution %of $\frac{(n-1)S^2}{\sigma^2}$ 
+is chi-squared distributed with $(n-1)$ degrees of freedom, i.e
+
+\begin{equation*}
+    \frac{(n-1)S^2}{\sigma^2} \sim \chi_{n-1}^2.
+\end{equation*}
