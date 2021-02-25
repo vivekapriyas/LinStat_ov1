@@ -5,14 +5,14 @@ Use $\textbf{X}$ and $\textbf{Y}$ as given in the problem set.
 %1/ \sqrt{2}  & 1/ \sqrt{2} 
 %\end{pmatrix}  \textbf{X}
 
-Define $C =  \begin{pmatrix}
+Define $A =  \begin{pmatrix}
 1/ \sqrt{2} & - 1/ \sqrt{2} \\
 1/ \sqrt{2}  & 1/ \sqrt{2} 
-\end{pmatrix}$, so $\textbf{Y} = C\textbf{X}$
+\end{pmatrix}$, so $\textbf{Y} = A\textbf{X}$
 
 The mean vector of Y:
 
-$$E[\textbf{Y}] = E[C \textbf{X}] = C E[\textbf{X}] = \begin{pmatrix}
+$$E[\textbf{Y}] = E[A \textbf{X}] = A E[\textbf{X}] = \begin{pmatrix}
 1/ \sqrt{2} & - 1/ \sqrt{2} \\
 1/ \sqrt{2}  & 1/ \sqrt{2} 
 \end{pmatrix} \begin{pmatrix}
@@ -26,7 +26,7 @@ $$E[\textbf{Y}] = E[C \textbf{X}] = C E[\textbf{X}] = \begin{pmatrix}
 
 The covariance matrix of Y : 
 
-$$\text{Cov}[\textbf{Y}] = \text{Cov}(C\textbf{X}) = C \cdot \text{Cov}(\textbf{X}) \cdot C^T $$ $$= \begin{pmatrix}
+$$\text{Cov}[\textbf{Y}] = \text{Cov}(A\textbf{X}) = A \cdot \text{Cov}(\textbf{X}) \cdot A^T $$ $$= \begin{pmatrix}
 1/ \sqrt{2} & - 1/ \sqrt{2} \\
 1/ \sqrt{2}  & 1/ \sqrt{2} 
 \end{pmatrix} \begin{pmatrix}
@@ -54,8 +54,7 @@ $$\textbf{Y } \mathtt{\sim} \text{ N}\left(\begin{pmatrix}
 0  & 4 
 \end{pmatrix}\right) $$
 
-$Y_1$ and $Y_2$ are independent variables since $\text{Cov}(Y_1, Y_2) = 0$ according to the covariance matrix of $Y$. 
+$Y_1$ and $Y_2$ are independent variables since $\textbf{Y}$ is bivariate normal distributed and $\text{Cov}(Y_1, Y_2) = 0$ according to the covariance matrix of $Y$. 
 
-%if one choose $A$ and $B$ such that $AY = Y_1$ and $BY = Y_2$ then $A \Sigma B^T = 0$
 
 
